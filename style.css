@@ -317,5 +317,164 @@ header{
     border-radius: 2px;
     width: 100%;
     overflow: hidden;
+ }
 
+ /* Contact us */
+
+ .contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(images/1353676.jpg);
+    background-size: cover;
+    color: #fff;
+ }
+
+ .contact .content{
+    max-width: 800px;
+    text-align: center;
+ }
+
+ .contact .content h1{
+    font-size: 52px;
+    color: #fff;
+    margin-bottom: 20px;
+ }
+
+ .cont-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+ }
+
+ .contact-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+ }
+
+ .box{
+    display: flex;
+    gap: 5px;
+ }
+
+ .icon i{
+    font-size: xx-large;
+    color: orangered;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+ }
+
+ .text{
+    margin-left: 20px;
+ }
+
+ .socials{
+    display: flex;
+    gap: 60px;
+    margin-top: 30px;
+    margin-left: 40px;
+ }
+ .socials a{
+    color: #fff;
+ }
+ .socials a:hover{
+    color: orangered;
+ }
+
+ .socials i{
+    margin-right: 5px;
+ }
+
+ .contact-form{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    color: #0a3c76;
+ }
+
+ .contact-form h2{
+    color: #0a3c76;
+    font-size: 30px;
+    font-weight: 500;
+ }
+
+ .contact-form .input-box{
+    position: relative;
+    width: 100%;
+    margin: 20px;
+ }
+
+ .contact-form .input-box #name, #email, #phone, textarea, #submit{
+    width: 100%;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+ }
+
+ .contact-form .input-box span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+ }
+ 
+ .contact .input-box input:focus ~ span,
+  .contact .input-box input:valid ~ span,
+  .contact .input-box textarea:focus ~ span,
+  .contact .input-box textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+ }
+ 
+ .contact-form .input-box textarea, #submit{
+    resize: none;
+    margin-right:20px ;
+    margin-left: -20px;
+ }
+
+ .contact-form .input-box #submit{
+    width: 100px;
+    background: orangered;
+    color: #fff;
+    border: none;
+ }
+
+ /* Responsive contact */
+ @media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+
+    .cont-container{
+        flex-direction: column;
+    }
+
+    .socials{
+        display: none;
+    }
+
+    .contact-info{
+        margin-bottom: 60px;
+        width: 100%;
+    }
+    .contact-form{
+        width: 100%;
+    }
  }
