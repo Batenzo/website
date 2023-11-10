@@ -39,13 +39,24 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 100px;
+    padding: 10px 100px;
     transition: 0.5s;
 
 }
+
+header.shadow{
+    background: #fff;
+    box-shadow: 0 0 4px rgb(14 55 54 / 15%);
+}
+
+header.shadow .navbar a{
+    color: var(--text-color);
+}
+
 .navbar{
     display: flex;
     column-gap: 5rem;
+    width: 100%;
 }
 .navbar li{
     position: relative;
@@ -341,7 +352,7 @@ header{
 
  .contact .content h1{
     font-size: 52px;
-    color: #fff;
+    color: orangered;
     margin-bottom: 20px;
  }
 
@@ -476,5 +487,118 @@ header{
     }
     .contact-form{
         width: 100%;
+    }
+ }
+
+ /* Footer */
+
+ footer{
+    position: relative;
+    width: 100%;
+    background: #0a3c76;
+    min-height: 200px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .f-socials{
+    display: flex;
+    gap: 60px;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 25px;
+ }
+
+ footer .menu{
+    color: #fff;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+ }
+
+ footer .menu a{
+    color: #fff;
+    text-align: center;
+ }
+
+ footer p{
+    color: #fff;
+    text-align: center;
+ }
+
+ /* Responsiveness */
+
+ @media (max-width:991px){
+    header{
+        padding: 18px 4%;
+    }
+    
+    section{
+        padding: 50px 4%;
+    }
+    .home-text{
+        /* padding: 0 4%; */
+    }
+ }
+
+ @media (max-width:881px){
+    .home-text h1{
+        font-size: 3rem;
+    }
+    .home-text p{
+        font-size: medium;
+    }
+ }
+
+ @media (max-width:768px){
+    #menu-icon{
+        color: #fff;
+        display: initial;
+    }
+    header.shadow #menu-icon{
+        color: var(--text-color);
+    }
+
+    header .navbar{
+        position: absolute;
+        width: 240px;
+        top: 100%;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        background: var(--bf-color);
+        padding: 20px;
+        row-gap: 1.4rem;
+        box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+        text-align: left;
+    }
+
+    .navbar a{
+        color: black;
+    }
+
+    .navbar a::after{
+        display: none;
+    }
+    .navbar.active{
+        right: 0;
+    }
+
+    .serv-details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reasons{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .why-img{
+        display: none;
     }
  }
