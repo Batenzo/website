@@ -38,10 +38,10 @@ header{
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
     padding: 10px 100px;
     transition: 0.5s;
-
+    
 }
 
 header.shadow{
@@ -51,6 +51,10 @@ header.shadow{
 
 header.shadow .navbar a{
     color: var(--text-color);
+}
+
+.logo{
+    margin-right: 550px
 }
 
 .navbar{
@@ -181,7 +185,11 @@ header.shadow .navbar a{
     padding: 15px;
     font-size: 25px;
 }
-.language .btn2{
+
+.language a{
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
     background-color: #0a3c76;
     margin-top: 10px;
     padding: 7px 15px;
@@ -190,19 +198,11 @@ header.shadow .navbar a{
     transition: 0.4s; 
     font-size: 15px;
     font-weight: 600;
-    color: #fff;  
-}
-.language .btn2:hover{
-    background: transparent;
-    border: 3px solid #0a3c76;
-    color: #0a3c76;
-}
-.language a{
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
 }
 .language a:hover{
+    color: #0a3c76;
+    background: transparent;
+    border: 3px solid #0a3c76;
     color: #0a3c76;
 }
 
@@ -225,7 +225,11 @@ header.shadow .navbar a{
     padding: 15px;
     font-size: 25px;
 }
-.translation button{
+
+.translation a{
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
     background-color: orangered;
     margin-top: 10px;
     padding: 7px 15px;
@@ -233,17 +237,10 @@ header.shadow .navbar a{
     border-radius: 5px;
     transition:0.4s ;
 }
-.translation button:hover{
-    background: transparent;
-    border: 3px solid orangered;
-}
-.translation a{
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
-}
 .translation a:hover{
     color: orangered;
+    background: transparent;
+    border: 3px solid orangered;
 }
 
 /* Why-us */
@@ -470,7 +467,7 @@ header.shadow .navbar a{
  /* Responsive contact */
  @media (max-width: 991px){
     .contact{
-        padding: 50px;
+        padding: 50px 4%;
     }
 
     .cont-container{
@@ -535,7 +532,9 @@ header.shadow .navbar a{
     header{
         padding: 18px 4%;
     }
-    
+    .logo{
+        margin-right: 40px
+    }
     section{
         padding: 50px 4%;
     }
@@ -551,6 +550,11 @@ header.shadow .navbar a{
     .home-text p{
         font-size: medium;
     }
+    .logo{
+        margin-right: 0px
+    }
+
+    
  }
 
  @media (max-width:768px){
@@ -559,7 +563,7 @@ header.shadow .navbar a{
         display: initial;
     }
     header.shadow #menu-icon{
-        color: var(--text-color);
+        color: black;
     }
 
     header .navbar{
@@ -576,6 +580,9 @@ header.shadow .navbar a{
         text-align: left;
     }
 
+    .logo{
+        margin-right: 0px;
+    }
     .navbar a{
         color: black;
     }
@@ -601,4 +608,54 @@ header.shadow .navbar a{
     .why-img{
         display: none;
     }
+ }
+
+ /* ipad responsive */
+
+ @media (max-width:1427px){
+    #menu-icon{
+        color: #fff;
+        display: initial;
+    }
+    header.shadow #menu-icon{
+        color: black;
+    }
+
+    header .navbar{
+        position: absolute;
+        width: 240px;
+        top: 100%;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        background: var(--bf-color);
+        padding: 20px;
+        row-gap: 1.4rem;
+        box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+        text-align: left;
+    }
+
+    .logo{
+        margin-right: 0px;
+    }
+    .navbar a{
+        color: black;
+    }
+
+    .navbar a::after{
+        display: none;
+    }
+    .navbar.active{
+        right: 0;
+    }
+
+    .serv-details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .translation{
+        width: 100%;
+    }
+
  }

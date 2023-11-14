@@ -41,7 +41,7 @@ var swiper = new Swiper(".home", {
       Username : "username",
       Password : "password",
       To : 'them@website.com',
-      From : "you@isp.com",
+      From : document.getElementById('email').value,
       Subject : "This is the subject",
       Body : "And this is the body"
   }).then(
