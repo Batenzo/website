@@ -45,6 +45,6 @@ var swiper = new Swiper(".home", {
       Subject : "New contact form enquiry",
       Body : "Name: " + document.getElementById("name").value + "<br> Email: " + document.getElementById("email").value + "<br> Phone no: " + document.getElementById("phone").value + "<br> Message: " + document.getElementById("message")
   }).then(
-    message => alert("Contact form temporarily not working 😔. Please use email or phone")
+    message => alert("Contact form temporarily not working 😔. Please use email or phone.")
   );
   }
